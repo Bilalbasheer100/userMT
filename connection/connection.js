@@ -7,7 +7,7 @@ var con = mysql.createConnection({
   database:"mydb"
 });
 
-con.connect(function(err) {
+module.exports.con.connect(function(err) {
   if (err) throw err;
   console.log("Connected!");
   con.query("CREATE DATABASE mydb", function (err, result) {
@@ -19,5 +19,5 @@ con.connect(function(err) {
     if (err) throw err;
     console.log("Table created");
   });
-  
+
 });
